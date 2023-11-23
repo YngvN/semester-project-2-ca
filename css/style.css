@@ -1,0 +1,36 @@
+.btn-primary {
+  background-color: #1A4E00;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #84A98C;
+}
+
+form {
+  box-shadow: 2px 2px 10px rgba(125, 125, 125, 0.4941176471);
+  padding: 10px 30px 10px 30px;
+  border-radius: 10px;
+}
+form .form-control, form .btn {
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+form .form-control {
+  border: none;
+  box-shadow: 2px 2px 10px rgba(125, 125, 125, 0.4941176471);
+  background-color: #f3f2f2;
+}
+form .form-group label {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #1A4E00;
+}
+
+/*# sourceMappingURL=style.css.map */
