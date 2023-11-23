@@ -1,5 +1,10 @@
 @import "./colors";
 
+#create-user-form,
+#login-form {
+    position: absolute;
+}
+
 form {
     box-shadow: 2px 2px 10px map-get($colors, shadow);
     padding: 10px 30px 10px 30px;
