@@ -1,5 +1,6 @@
 import * as utility from './utility.mjs';
-
+import { registerUser } from './register.mjs';
+import { loginUser } from './register.mjs';
 
 // import { showLoading, hideLoading } from "./utility.js";
 
@@ -13,9 +14,10 @@ import * as utility from './utility.mjs';
 document.addEventListener('DOMContentLoaded', () => {
     const btnShowCreateUser = document.getElementById('btn-show-createUser');
     const btnShowLogin = document.getElementById('btn-show-login');
-    const formCreateUser = document.getElementById('create-user-form');
+    const loginForm = document.getElementById('login-form');
+    const createUserForm = document.getElementById('create-user-form');
 
-    formCreateUser.style.display = "none";
+    createUserForm.style.display = "none";
     
 
     btnShowCreateUser.addEventListener('click', () => {
@@ -27,6 +29,46 @@ document.addEventListener('DOMContentLoaded', () => {
         utility.hideElement('create-user-form');
         utility.revealElement('login-form');
     });
+
+
+    loginForm.addEventListener('submit', (event) => {
+        event.preventDefault(); 
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
+        const rememberMe = document.getElementById('login-checkRemember').checked;
+
+        loginUser(email, password, rememberMe);
+    });
+
+    createUserForm.addEventListener('submit', (event) => {
+    event.preventDefault(); 
+        const name = document.getElementById('inputUsername').value;
+        const email = document.getElementById('inputEmail').value;
+        const password = document.getElementById('inputPassword').value;
+        const repeatPassword = document.getElementById('inputRepeatPassword').value;
+
+
+        if (password !== repeatPassword) {
+            alert('Passwords do not match. Please try again.');
+            return;
+        }
+
+        if (!email.endsWith('@stud.no')) {
+            alert('Email must end with @stud.no');
+            return;
+        }
+
+        registerUser(name, email, password);
+
+    });
+
+    const skipLoginLink = document.querySelector('.btn-skipLogin');
+
+    //Needs to be more safe
+    skipLoginLink.addEventListener('click', (event) => {
+        event.preventDefault();
+            window.location.href = "pages/index.html";
+    });
 });
 
 
@@ -34,4 +76,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-console.log("index.mjs loaded")
+console.log("index.mjs loaded");

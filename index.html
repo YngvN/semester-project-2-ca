@@ -27,13 +27,7 @@
 </header>
 
 <main>
-    <!-- <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6 text-center"> 
-                <h2 class="text-center">It's not a auction house.<br>It's a</h2>
-                <img src="assets/images/logo - full.png" alt="Auction Home Logo" class="img-fluid w-50">
-            </div>
-        </div> -->
+
     <div class="container">
         <div class="row justify-content-center">
             <div id="login-form" class="col-md-6">
@@ -41,27 +35,27 @@
                 <form>
                     <h1 class="text-center">Sign in</h1>
                     <div class="form-group">
-                        <label for="inputEmail">Email address</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Enter email">
+                        <label for="login-email">Email address</label>
+                        <input type="email" class="form-control" id="login-email" placeholder="Enter email">
                     </div>
                     <div class="form-group">
-                        <label for="inputPassword">Password</label>
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        <label for="login-password">Password</label>
+                        <input type="password" class="form-control" id="login-password" placeholder="Password">
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="checkRemember">
-                        <label class="form-check-label" for="checkRemember">Remember me</label>
+                        <input type="checkbox" class="form-check-input" id="login-checkRemember">
+                        <label class="form-check-label" for="login-checkRemember">Remember me</label>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary w-100">Login</button>
-                    </div>                    
+                        <button id="btn-login" type="submit" class="btn btn-primary w-100">Login</button>
+                    </div>
                 </form>
                 <div class="text-center p-3">
                     <p>Don't have a profile?</p>
                     <div class="text-center w-100">
                         <button id="btn-show-createUser" class="btn btn-secondary">Create a User</button>
                         <span>or</span>
-                        <a href="#">Continue without login</a>
+                        <a class="btn-skipLogin" href="pages/index.html">Continue without login</a>
                     </div>
                 </div>
             </div>
@@ -69,6 +63,10 @@
                 <!-- Create user form -->
                 <form>
                     <h1 class="text-center">Create user</h1>
+                    <div class="form-group">
+                        <label for="inputUsername">Username</label>
+                        <input type="username" class="form-control" id="inputUsername" placeholder="Enter username">
+                    </div>
                     <div class="form-group">
                         <label for="inputEmail">Email address</label>
                         <input type="email" class="form-control" id="inputEmail" placeholder="Enter email">
@@ -86,7 +84,7 @@
                         <label class="form-check-label" for="checkRemember">Remember me</label>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary w-100">Create user</button>
+                        <button id="btn-create-user" type="submit" class="btn btn-primary w-100">Create user</button>
                     </div>
                 </form>
                 <div class="text-center p-3">
@@ -94,7 +92,7 @@
                     <div class="text-center w-100">
                         <button id="btn-show-login" class="btn btn-secondary">Sign in</button>
                         <span>or</span>
-                        <a href="#">Continue without login</a>
+                        <a class="btn-skipLogin" href="pages/index.html">Continue without login</a>
                     </div>
                 </div>
             </div>

@@ -28,7 +28,7 @@
  */
 export function hideElement(elementId) {
     const element = document.getElementById(elementId);
-    const fadeDuration = 500;
+    const fadeDuration = 100;
 
     if (element) {
 
@@ -51,7 +51,7 @@ export function hideElement(elementId) {
  */
 export function revealElement(elementId) {
     const element = document.getElementById(elementId);
-    const fadeDuration = 500;
+    const fadeDuration = 100;
 
     if (element) {
         element.style.display = 'block'; 
@@ -69,4 +69,4 @@ export function revealElement(elementId) {
 
 
 
-console.log("utility.mjs loaded")
+console.log("utility.mjs loaded");

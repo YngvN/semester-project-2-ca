@@ -6,6 +6,11 @@
   background-color: #84A98C;
 }
 
+#create-user-form,
+#login-form {
+  position: absolute;
+}
+
 form {
   box-shadow: 2px 2px 10px rgba(125, 125, 125, 0.4941176471);
   padding: 10px 30px 10px 30px;
