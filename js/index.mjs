@@ -5,3 +5,5 @@
 // setTimeout(() => {
 //     hideLoading();
 // }, 2000);
+
+console.log("index.mjs loaded")
