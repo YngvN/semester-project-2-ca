@@ -39,4 +39,68 @@ h4 {
   font-family: helvetica;
 }
 
+header {
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  align-items: center;
+  border-bottom: 2px solid #1A4E00;
+  background: linear-gradient(125deg, #ffffff 50%, #1A4E00 50%);
+}
+
+.logo-header {
+  height: 50px;
+  width: auto;
+}
+
+#btn-hamburger {
+  display: block;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  margin: 5px;
+}
+#btn-hamburger .burger-piece {
+  display: flex;
+  position: absolute;
+  background-color: white;
+  height: 15%;
+  width: 15%;
+  border-radius: 50%;
+  left: 40%;
+  transition: 0.3s;
+}
+#btn-hamburger #burger-top {
+  top: 5%;
+}
+#btn-hamburger #burger-middle {
+  top: 40%;
+}
+#btn-hamburger #burger-bottom {
+  top: 75%;
+}
+
+#btn-hamburger.toggle .burger-piece {
+  left: 0;
+  border-radius: 35%;
+}
+#btn-hamburger.toggle #burger-top {
+  transform: rotate(-45deg);
+}
+#btn-hamburger.toggle #burger-middle {
+  opacity: 0;
+  /* Hide the middle bar */
+}
+#btn-hamburger.toggle #burger-bottom {
+  transform: rotate(45deg);
+}
+#btn-hamburger.toggle #burger-top, #btn-hamburger.toggle #burger-bottom {
+  width: 100%;
+  height: 15%;
+  top: 40%;
+}
+
 /*# sourceMappingURL=style.css.map */

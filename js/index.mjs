@@ -13,6 +13,9 @@ import { checkToken } from "./tokenCheck.mjs"
 checkToken ();
 
 
-
+document.getElementById('btn-hamburger').addEventListener('click', function() {
+    this.classList.toggle('toggle');
+});
 
 console.log("index.mjs loaded")
+

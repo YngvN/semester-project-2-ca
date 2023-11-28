@@ -1,0 +1,62 @@
+@import "./colors";
+
+
+#btn-hamburger {
+    display: block;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    margin: 5px;
+
+    .burger-piece {
+        display: flex;
+        position: absolute;
+        background-color: white;
+        height: 15%;
+        width: 15%;
+        border-radius: 50%;
+        left: 40%;
+        transition: .3s;
+    }
+    #burger-top {
+        top: 5%;
+    }
+
+    #burger-middle {
+        top: 40%;
+        }
+
+    #burger-bottom {
+        top: 75%;    
+    }
+
+
+}
+
+
+#btn-hamburger.toggle {
+    .burger-piece {
+        left: 0;
+        border-radius: 35%;
+    }
+    #burger-top {
+        transform: rotate(-45deg);
+
+    }
+    #burger-middle {
+        opacity: 0;
+        /* Hide the middle bar */
+    }
+    #burger-bottom {
+        transform: rotate(45deg);
+
+    }
+    #burger-top, #burger-bottom {
+        width: 100%;
+        height: 15%;
+        top: 40%;
+    }
+}
