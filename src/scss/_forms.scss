@@ -5,10 +5,11 @@
     position: absolute;
 }
 
+#create-user-form {
+    display: none;
+}
+
 form {
-    box-shadow: 2px 2px 10px map-get($colors, shadow);
-    padding: 10px 30px 10px 30px;
-    border-radius: 10px;
 
     .form-control, .btn {
         padding: 15px;
@@ -24,5 +25,19 @@ form {
     }
     .form-group label {
         display: none;
+    }
+
+    .inputDate-container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #inputDate {
+        
+    }
+
+    #inputDescription {
+        text-align: left;
     }
 }

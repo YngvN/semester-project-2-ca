@@ -1,0 +1,40 @@
+@import "./colors";
+
+img {
+    max-width: 100%;
+}
+
+.image-mask {
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+#btn-profile-avatar {
+    .profile-avatar {
+        min-height: 100%;
+        max-width: auto;
+        object-fit: cover;
+    }
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#user-info-avatar {
+
+    width: 200px;
+    height: 200px;
+    @media (max-width: 700px) {
+        display: none;
+    }
+}
+
+.user-avatar {
+    border-radius: 50%;
+    object-fit: cover;
+}
+

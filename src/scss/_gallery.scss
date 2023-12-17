@@ -1,0 +1,23 @@
+@import "./colors";
+
+#listings-gallery {
+    margin-left: auto;
+    margin-right: 1em;
+    max-width: 70%;
+
+
+    .listings-carousel {
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+        white-space: nowrap;
+        max-width: 100%;
+        background-color: blue;
+
+    }
+
+    .listing-tile-preview {
+        flex: 0 0 auto;
+        margin-right: 10px;
+    }
+}

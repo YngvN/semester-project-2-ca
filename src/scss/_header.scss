@@ -1,12 +1,18 @@
 @import "./colors";
 
-header {
+#header-index {
+    top: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    position: fixed;
     display: flex;
+    width: 100%;
+    z-index: 1000;
     padding-top: 5px;
     padding-bottom: 5px;
     align-items: center;
     border-bottom: 2px solid map-get($colors, primary );
-background: linear-gradient(125deg, map-get($colors, 'bg-color') 50%, map-get($colors, 'primary') 50%);}
+    background: linear-gradient(125deg, map-get($colors, 'bg-color') 50%, map-get($colors, 'primary') 50%);}
 
 .logo-header {
     height: 50px;

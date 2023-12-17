@@ -1,8 +1,14 @@
 
 
 
-export const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODcyLCJuYW1lIjoiVGVzdCIsImVtYWlsIjoidGVzdDEyM0BzdHVkLm5vcm9mZi5ubyIsImF2YXRhciI6bnVsbCwiY3JlZGl0cyI6MTAwMCwid2lucyI6W10sImlhdCI6MTcwMDc3MTAxNn0.-jFtmN3_-nz1Oap38fXnMZ0JvOgZxt3Jd_grKNxBG64";
+const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODcyLCJuYW1lIjoiVGVzdCIsImVtYWlsIjoidGVzdDEyM0BzdHVkLm5vcm9mZi5ubyIsImF2YXRhciI6bnVsbCwiY3JlZGl0cyI6MTAwMCwid2lucyI6W10sImlhdCI6MTcwMDc3MTAxNn0.-jFtmN3_-nz1Oap38fXnMZ0JvOgZxt3Jd_grKNxBG64";
 
+
+const options = {
+  headers: {
+    Authorization: 'Bearer ' + accessToken,
+  },
+}
 
 export function checkToken() {
     let loginDataString = sessionStorage.getItem('loginData');
@@ -31,3 +37,5 @@ export function checkToken() {
         console.log("loginData is not an array or is in an incorrect format.");
     }
 }
+
+console.log("checkToken.mjs loaded")

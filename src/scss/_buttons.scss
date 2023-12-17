@@ -7,3 +7,98 @@
     background-color: map-get($colors, secondary);
     }
 }
+
+#btn-back {
+    display: flex;
+    text-decoration: none;
+    position: absolute;
+    left: 3em;
+
+
+    i {
+        color: map-get($colors, primary);
+        font-size: 40px;
+        transition: color .2s ease-in;
+    }
+
+    :hover {
+        color: map-get($colors, secondary);
+    }
+
+    @media (min-width: 600px) { 
+        left: auto;
+
+
+    }
+}
+
+#btn-profile-avatar {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    img {
+        height: 100%;
+        width: auto;
+    }
+
+    i {
+        color: gray;
+        background-color: map-get($colors, text-reverse) ;
+        position: absolute;
+        bottom: 2%;
+        right: 2%;
+        border-radius: 5px;
+        font-size: 40px;
+        padding-left: 3px;
+        padding-right: 3px;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+        }
+
+
+    
+    :hover~i {
+        opacity: 1;
+    }
+    
+}
+
+.btn-exit {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+.btn-add {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 2px map-get($colors, shadow );
+
+    .icon-plus,
+    .icon-minus {
+        background-color: map-get($colors, text );
+        display: flex;
+        position: absolute;
+        height: 10%;
+        width: 50%;
+        border-radius: 80px;
+        transition: .3s;
+
+    }
+
+    .icon-plus {
+        transform: rotate(90deg);
+    }
+}

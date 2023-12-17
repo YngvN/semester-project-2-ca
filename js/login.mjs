@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('inputEmail').value;
         const password = document.getElementById('inputPassword').value;
         const repeatPassword = document.getElementById('inputRepeatPassword').value;
+        const rememberMe = document.getElementById('checkRemember').checked;
 
 
         if (password !== repeatPassword) {
@@ -53,12 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        if (!email.endsWith('@stud.no')) {
-            alert('Email must end with @stud.no');
+        if (!email.endsWith('@stud.noroff.no') && !email.endsWith('@noroff.no')) {
+            alert('Email must end with @stud.noroff.no or @noroff.no');
             return;
         }
 
+
         registerUser(name, email, password);
+        
 
     });
 
@@ -67,8 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
     //Needs to be more safe
     skipLoginLink.addEventListener('click', (event) => {
         event.preventDefault();
-            window.location.href = "pages/index.html";
+        sessionStorage.setItem('loggedIn', false);
+        window.location.href = "pages/index.html";
     });
+
+console.log("login.mjs loaded");
 });
 
 
@@ -76,4 +82,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-console.log("index.mjs loaded");

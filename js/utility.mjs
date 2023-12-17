@@ -26,8 +26,8 @@
 /**
  * Hides an element with fade-out
  */
-export function hideElement(elementId) {
-    const element = document.getElementById(elementId);
+export function hideElement(element) {
+
     const fadeDuration = 100;
 
     if (element) {
@@ -49,8 +49,9 @@ export function hideElement(elementId) {
 /**
  * Reveals an element with fade-in
  */
-export function revealElement(elementId) {
-    const element = document.getElementById(elementId);
+export function revealElement(element) {
+
+
     const fadeDuration = 100;
 
     if (element) {
@@ -66,6 +67,50 @@ export function revealElement(elementId) {
     }
 
 }
+
+
+/**
+ * Toggles the hamburgermeny
+ */
+export function toggleHamburgerMenu() {
+    try {
+        var btnHamburger = document.getElementById('btn-hamburger');
+        btnHamburger.classList.toggle('toggle');
+        const hamburgerMenu = document.getElementById('burger-menu');
+
+        if (btnHamburger.classList.contains('toggle')) {
+            revealElement(hamburgerMenu);
+            console.log("showing hamburger");
+        } else {
+            hideElement(hamburgerMenu);
+            console.log("hiding hamburger");
+        }
+    } catch (error) {
+        console.error("Error occurred in hamburger menu functionality:", error);
+    }
+}
+
+
+
+/**
+ * Checks if a container has the class "toggle" and calls appropriate functions based on the class presence.
+ * @param {string} id - The ID of the element to check for the 'toggle' class.
+ * @param {*} Element - Element to hide or reveal
+
+ */
+export function checkToggleClass(id, element) {
+
+    if (id && id.classList.contains('toggle')) {
+        revealElement(element);
+        console.log("Revealing  " + element);
+
+    } else {
+        hideElement(element);
+        console.log("Hiding  " + element);
+    }
+}
+
+
 
 
 

@@ -1,0 +1,28 @@
+@import "./colors";
+
+#modal-create-listing {
+    display: none;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-250px) translateY(-200px);
+    width: 500px;
+    transition: .2s ease;
+    padding-top: 1.5em;
+
+    #btn-exit {
+        margin: 5px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    @media (max-width: 600px) {
+        width: 100vw;
+        transform: translateX(0) translateY(0);
+        left: 0;
+        top: 10em;
+    }
+}
+

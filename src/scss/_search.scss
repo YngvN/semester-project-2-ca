@@ -1,0 +1,43 @@
+@import "./colors";
+.search-container {
+    position: relative;
+    box-shadow: 5px 5px 5px map-get($colors , shadow );
+    border-radius: 10px;
+    background-color: map-get($colors , bg-grey);
+    padding: 10px 20px 10px 20px;
+    display: flex;
+
+
+    &:hover {
+        .fa-search {
+            transform: rotate(-5deg);
+        }
+    }
+
+    input {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+
+
+    }
+    input:focus{
+        outline: none;
+    }
+
+
+    .fa-search {
+        transition: .2s ease-in-out;
+        font-size: 30px;
+        margin-right: 10px;
+    }
+
+}
+
+#btn-search {
+    position: absolute;
+    right: 0;
+    height: 50px;
+    top: 0;
+
+}

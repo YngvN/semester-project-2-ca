@@ -24,6 +24,7 @@ export async function registerUser(name, email, password) {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
+        console.log("Create user success")
 
         const data = await response.json();
         return data;
@@ -59,6 +60,8 @@ export async function loginUser(email, password, rememberMe) {
         } else {
             sessionStorage.setItem('loginData', JSON.stringify(data));
         }
+
+        sessionStorage.setItem('loggedIn', true);
 
         console.log('Login successful:', data);
     } catch (error) {

@@ -5,77 +5,119 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Change the description -->
-    <meta name="description" content="A website">
+    <meta name="description" content="It's not a auction house. It's a auction home">
     <script src="https://kit.fontawesome.com/bb746328b1.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="../js/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>AH - My profile</title>
 
 </head>
 
-<body class="body-index">
-    <header>
-        <h3>This is the header</h3>
-        <button class="btn-hamburger btn-style-1"><span class="hamburger"></span></button>
-        <nav>
-            <ul class="list-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="">
-            <button><i class="fa-solid fa-user"></i></button>
-            <button><i class="fa-solid fa-cart-shopping"></i></button>
+<body>
+
+    <header id="header-index">
+        <div class="container">
+            <div class="row justify-content-between">
+                <a href="/pages/index.html" class="logo-header"><img src="../assets/images/logo - notext.png"
+                        alt="Auction Home Logo" class="logo-header"></a>
+                <button id="btn-hamburger">
+                    <span id="burger-top" class="burger-piece"></span>
+                    <span id="burger-middle" class="burger-piece"></span>
+                    <span id="burger-bottom" class="burger-piece"></span>
+                </button>
+                <div id="burger-menu" class="text-center col-3 flex-column justify-content-center align-items-center">
+                    <img src="../assets/images/logo - full.png" alt="Auction Home Logo" class="img-fluid w-25">
+                    <h3>Please sign in</h3>
+                    <a href="index.html" class="btn btn-primary w-50">Sign in</a>
+                </div>
+            </div>
         </div>
     </header>
 
     <main>
-        <h1>This is main</h1>
+
         <div class="container">
-            <h2>This is the container</h2>
-            <div class="child">
-                <p>This is the child</p>
+            <a id="btn-back" href="/pages/index.html"><i class="fa-solid fa-arrow-left-long"></i></a>
+            <div class="col text-center">
+                <h1>My profile</h1>
+                <div id="profile-info" class="d-flex box">
+
+                    <button id="btn-profile-avatar">
+                        <div class="image-mask">
+                            <img src="../assets/images/img-profile-placeholder.png" alt="Profile avatar" class="profile-avatar">
+                        </div>
+                        <i class="fa-solid fa-image"></i>
+                    </button>
+
+                    <div class="col">
+
+                        <div class="mb-3 row">
+                            <label for="user-info-username" class="col-sm-2 col-form-label">Username:</label>
+                            <div class="col-sm-10">
+                                <span id="user-info-username" class="form-control-plaintext">N/A</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3 row">
+                            <label for="user-info-email" class="col-sm-2 col-form-label">Email:</label>
+                            <div class="col-sm-10">
+                                <span id="user-info-email" class="form-control-plaintext">N/A</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3 row">
+                            <label for="user-info-credits" class="col-sm-2 col-form-label">Credits:</label>
+                            <div class="col-sm-10">
+                                <span id="user-info-credits" class="form-control-plaintext">N/A</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+            <div class="box" id="profileAvatarModal">
+                <button id="btn-exit" class="btn btn-exit"><i class="fa-solid fa-x"></i></button>
+                <form>
+                        <label for="avatarUrl">Enter the URL of your avatar:</label>
+                        <input type="text" id="avatarUrl" name="avatarUrl" placeholder="http://example.com/"><br><br>
+                        <img id="preview" src="" height="200" alt="Image preview...">
+                        <br><br>
+                    <Button id="btn-save-avatar" type="button" class="btn btn-primary">Submit</Button>
+                </form>
+            </div>
+            <div class="col">
+                <div class="w-100 text-center justify-content-between">
+                    <button class="btn btn-primary">Listings</button>
+                    <button class="btn btn-primary">Bids</button>
+                </div>
+                <div id="list-group-listing" class="list-group-horizontal-lg list-group">
+                    <div class="listing-tile-preview position-relative box">
+                        <div class="tile-image-container position-relative">
+                            <img id="img-listing-preview" src="../assets/images/img-listing-placeholder.jpg" alt="Image of listing-product" class="img-listing-tile">
+                            <img id="img-listing-avatar" src="../assets/images/img-profile-placeholder.png" alt="User avatar" class="img-avatar-listing">
+                        </div>
+                        <h4 class="listing-title text-center">Product-name</h4>
+                        <div class="listing-tile-text">
+                            <p class="bids">3 bids</p>
+                            <p class="time-left">0 hours left</p>
+                            <p class="price">$00,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
 
     </main>
 
-    <footer>
-        <h3>This is the footer</h3>
-        <div class="container">
-            <div class="child social">
-                <a href="www.facebook.com"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="www.twitter.com"><i class="fa-brands fa-square-twitter"></i></a>
-                <a href="www.instagram.com"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="www.reddit.com"><i class="fa-brands fa-square-reddit"></i></a>
-                <a href="www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="www.pinterest.com"><i class="fa-brands fa-square-pinterest"></i></a>
-                <a href="www.github.com"><i class="fa-brands fa-square-github"></i></a>
-                <a href="www.discord.com"><i class="fa-brands fa-discord"></i></a>
-                <a href="www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="#"><i class="fa-solid fa-square-rss"></i></a>
-            </div>
-        </div>
-        <div class="container contact-info">
-            <div class="child child-1 row">
-                <i class="fa-solid fa-location-dot"></i>
-                <p>Adresse</p>
-            </div>
-            <div class="child child-2 row">
-                <i class="fa-solid fa-phone"></i>
-                <p>Phone</p>
-            </div>
-            <div class="child child-3 row">
-                <i class="fa-solid fa-envelope"></i>
-                <p>Email</p>
-            </div>
-        </div>
-        <p>Copyright © 2023 COMPANY-NAME | All Rights Reserved</p>
-    </footer>
+    <!-- <footer>
+    <p>Copyright © 2023 COMPANY-NAME | All Rights Reserved</p>
+</footer> -->
 
-    <script src="js/index.js" type="module"></script>
-    <script src="js/utility.js" type="module"></script>
+    <script src="../js/profiles.mjs" type="module"></script>
+    <script src="../js/utility.mjs" type="module"></script>
+
 
 </body>
 

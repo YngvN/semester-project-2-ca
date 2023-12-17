@@ -1,0 +1,14 @@
+@import "./colors";
+
+#user-stats {
+    position: absolute;
+    top: 10em;
+
+    @media (max-width: 600px) {
+        width: 100vw;
+        transform: translateX(0) translateY(0);
+        left: 0;
+        top: 10em;
+    }
+}
+

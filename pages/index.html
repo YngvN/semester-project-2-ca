@@ -15,21 +15,119 @@
 
 <body>
 
-    <header>
+    <header id="header-index">
         <div class="container">
             <div class="row justify-content-between">
-                    <img src="../assets/images/logo - notext.png" alt="Auction Home Logo" class="logo-header">
-                    <button id="btn-hamburger">
-                        <span id="burger-top" class="burger-piece"></span>
-                        <span id="burger-middle" class="burger-piece"></span>
-                        <span id="burger-bottom" class="burger-piece"></span>
-                    </button>
-                    
+                <a href="/pages/index.html" class="logo-header"><img src="../assets/images/logo - notext.png" alt="Auction Home Logo" class="logo-header"></a>
+                <button id="btn-hamburger">
+                    <span id="burger-top" class="burger-piece"></span>
+                    <span id="burger-middle" class="burger-piece"></span>
+                    <span id="burger-bottom" class="burger-piece"></span>
+                </button>
+                <div id="burger-menu" class="text-center col-3 flex-column justify-content-center align-items-center">
+                    <img src="../assets/images/logo - full.png" alt="Auction Home Logo" class="img-fluid w-25">
+                    <h3>Please sign in</h3>
+                    <a href="index.html" class="btn btn-primary w-50">Sign in</a>
+                </div>
             </div>
         </div>
     </header>
 
     <main>
+
+
+<div class="container">
+        <div class="col text-center">
+
+
+            <div class="search-container">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="btn-search" class="btn btn-primary">Search</button>
+                <div id="search-results"></div>
+            </div>
+    <div id="user-stats" class="col text-center">
+        <a href="/pages/profile.html"><img id="user-info-avatar" src="../assets/images/img-profile-placeholder.png" alt="User avatar" class="user-avatar"></a>
+        <h3 id="user-info-username">Welcome Username</h3>
+        <div class="col box position-relative">
+            <h4>Your account</h4>
+            <div class="">
+                <span>Credits:</span>
+                <span id="user-info-credits">0</span>
+            </div>
+            <div class="col">
+                <div class="w-100 p-1 justify-content-center">
+                    <span id="user-info-listings">0</span><span> active listings</span>
+                    <a id="btn-location-listings" href="profile.html" class="btn btn-primary">View</a>
+
+                </div>
+                <div class="w-100 p-1 justify-content-center">
+                    <span id="user-info-bids">0</span><span> active bids</span>
+                    <a id="btn-location-bids" href="profile.html" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+        <button id="btn-create-listing" class="mt-2 btn btn-primary">+ Create listing</button>
+    </div>
+    <div id="listings-gallery" class="d-flex">
+        <div>
+            <div class="image-gallery">
+
+            </div>
+            <div id="listing-display-1" class="listings-carousel">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-create-listing" class="box">
+    <h2>Create listing</h2>
+    <button id="btn-exit" class="btn btn-exit"><i class="fa-solid fa-x"></i></button>
+
+    <form>
+
+        <div class="image-group">
+            <div class="image-container">
+                <button class="btn-add">
+                    <span class="icon-plus"></span>
+                    <span class="icon-minus"></span>
+                </button>
+                <div class="create-listing-image">
+                    <label for="imageUrl">Enter image URL:</label>
+                    <input type="text" id="imageUrl" name="imageUrl" placeholder="http://example.com/"><br><br>
+                    <!-- <img id="preview" src="" height="200" alt="Image preview..."> -->
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <div class="form-group">
+                <label for="inputTitle">Title</label>
+                <input type="title" class="form-control" id="inputTitle" placeholder="Listing title">
+            </div>
+            <div class="inputDate-container">
+                <h4>End-date:</h4>
+                <div class="form-group">
+                    <label for="inputTime">End-date</label>
+                    <input type="datetime-local" class="form-control" id="inputDate" placeholder="hh/ss">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputDescription">Description</label>
+                <textarea class="form-control" id="inputDescription" placeholder="Description" rows="4"></textarea>
+            </div>
+
+        </div>
+        <button class="btn btn-primary">Create listing</button>
+
+
+        
+    </form>
+</div>
+
+</div>
+
+
 
 
     </main>
@@ -40,6 +138,8 @@
 
     <script src="../js/index.mjs" type="module"></script>
     <script src="../js/utility.mjs" type="module"></script>
+    <script src="../js/tokenCheck.mjs" type="module"></script>
+
 
 </body>
 

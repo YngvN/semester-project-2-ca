@@ -1,0 +1,93 @@
+@import "./colors";
+
+.listing-tile-preview {
+    display: flex;
+    flex-direction: column;
+    height: 230px;
+    width: 200px;
+    transition: .2s ease-in-out;
+
+    justify-content: center;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+
+    .listing-tile-text {
+        height: 60px;
+
+
+        .bids,
+        .time-left,
+        .price {
+            position: absolute;
+        }
+
+
+        .bids {
+            left: 1em;
+        }
+
+        .time-left {
+            right: 1em;
+            color: red;
+        }
+
+        .price {
+            left: 50%;
+            bottom: 0;
+            font-weight: 600;
+            transform: translateX(-30px);
+
+            
+        }
+
+    }
+    .tile-image-container {
+        width: 100%;
+        padding: 0;
+        max-height: 40%;
+    }
+
+    #img-listing-preview {
+        width: 100%;
+        object-fit: cover;
+        height: 50%;
+        border-radius: 20px;
+        border: solid 2px map-get($colors , secondary );
+        transition: border-radius .2s ease;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    #img-listing-avatar {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        right: 0;
+        
+    }
+
+}
+
+.image-mask {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+}
+
+.listing-tile-preview:hover {
+    background-color: map-get($colors , secondary);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin: 0;
+
+    #img-listing-preview {
+        border-radius: 0;
+        border: none;
+    }
+}
