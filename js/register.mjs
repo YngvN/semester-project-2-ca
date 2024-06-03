@@ -1,51 +1,38 @@
-import { registerURL } from "./url.mjs";
-import { loginURL } from "./url.mjs";
+import { registerURL, loginURL } from "./url.mjs";
 
 /**
  * Sends information to create a new user
  */
 export async function registerUser(name, email, password) {
-
-    const userData = {
-        name: name,
-        email: email,
-        password: password
-    };
+    const userData = { name, email, password };
 
     try {
         const response = await fetch(registerURL, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(userData)
         });
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        console.log("Create user success")
 
+        console.log("Create user success");
         const data = await response.json();
-        return data;
+        return data.success;
     } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
+        return false;
     }
 }
 
 export async function loginUser(email, password, rememberMe) {
-    const loginDetails = {
-        email: email,
-        password: password
-    };
-        console.log(rememberMe);
+    const loginDetails = { email, password };
 
     try {
         const response = await fetch(loginURL, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(loginDetails)
         });
 
@@ -61,10 +48,11 @@ export async function loginUser(email, password, rememberMe) {
             sessionStorage.setItem('loginData', JSON.stringify(data));
         }
 
-        sessionStorage.setItem('loggedIn', true);
-
+        sessionStorage.setItem('loggedIn', 'true');
         console.log('Login successful:', data);
+        return true;
     } catch (error) {
         console.error('Error during login:', error);
+        return false;
     }
 }
