@@ -4,13 +4,15 @@
 
 My submission for an auction house using Noroffs API.
 
+- [Link to site](https://dreamy-travesseiro-82baa1.netlify.app/)
+
+https://dreamy-travesseiro-82baa1.netlify.app/
+
 ## Description
 
 An auction house where you can add new products and get credits to bid on items.
 
 ## Built With
-
-You can list a the tech stack that you've used over here
 
 - [Noroff API](https://docs.noroff.dev/)
 - [Bootstrap](https://getbootstrap.com)
