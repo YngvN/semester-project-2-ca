@@ -1,12 +1,10 @@
 # Semester Project 2
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](https://hp.nykas.me/wp-content/uploads/2024/06/Skjermbilde-2024-06-04-kl.-12.39.27-1536x860.png)
 
 My submission for an auction house using Noroffs API.
 
 - [Link to site](https://dreamy-travesseiro-82baa1.netlify.app/)
-
-https://dreamy-travesseiro-82baa1.netlify.app/
 
 ## Description
 
